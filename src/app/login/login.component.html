@@ -1,0 +1,20 @@
+<h2>Login Here</h2>
+<form action="" [formGroup]="formLogin">
+  <div class="col-lg-4">
+
+    <label class="center-block">Username:
+      <input class="form-control" formControlName="username">
+    </label>
+  </div>
+  <div class="col-lg-4">
+
+    <label class="center-block">Password:
+      <input class="form-control" formControlName="password" type="password">
+    </label>
+  </div>
+
+  <div class="col-lg-4 button">
+    <button class="btn btn-default" (click)="login()">Login</button>
+  </div>
+
+</form>

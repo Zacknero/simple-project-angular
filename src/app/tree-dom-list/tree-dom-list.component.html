@@ -1,0 +1,23 @@
+<div>
+  <form>
+    <div class="form-group">
+      <div class="input-group">
+        <input [(ngModel)]="searchText" name="id" placeholder="search text goes here">
+      </div>
+    </div>
+  </form>
+</div>
+<div class="table-responsive">
+  <table class="table table-bordered">
+    <tr>
+      <td>ID</td>
+      <td>NAME</td>
+      <td>Scientific_Name</td>
+    </tr>
+    <tr class="active" *ngFor="let tree of listTree | filterTree : searchText">
+      <td>{{tree.id}}</td>
+      <td>{{tree.name['it']}}</td>
+      <td>{{tree.scientificName.name}}</td>
+    </tr>
+  </table>
+</div>
